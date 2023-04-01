@@ -1,13 +1,19 @@
-pub mod neurons;
-use neurons::InputNode;
-use neurons::OutputNeuron;
-use neurons::Neuron;
-use neurons::Relation;
-use std::borrow::BorrowMut;
+mod input_neuron;
+mod output_neuron;
+mod neuron;
+mod relation;
+mod common;
+mod math;
+
 use std::rc::Rc;
 
+use self::input_neuron::InputNode;
+use self::neuron::Neuron;
+use self::output_neuron::OutputNeuron;
+use self::relation::Relation;
 
-pub(crate) struct Network {
+
+pub struct Network {
     pub input_nodes: Vec<InputNode>,
     pub output_nodes: Vec<OutputNeuron>,
 }
