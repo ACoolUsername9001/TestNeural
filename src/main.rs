@@ -1,5 +1,6 @@
+
+mod training_data_mnist;
 mod neural_infra;
-mod mnist_source;
 use neural_infra::Network;
 
 fn main() {
